@@ -47,7 +47,7 @@ public class MouseLook : MonoBehaviour
             if (plrController.GetState() != PlayerState.dead && plrController.GetState() != PlayerState.won)
             {
                 zoomedAmmount += -Time.deltaTime * 10;
-                sensitivity = 150;
+                sensitivity = 125f;
                 crosshair.enabled = false;
                 plrController.SetState(PlayerState.aiming);
             }
@@ -64,7 +64,7 @@ public class MouseLook : MonoBehaviour
             }
         }
 
-        zoomedAmmount = Mathf.Clamp(zoomedAmmount, -1.4f, 0f);
+        zoomedAmmount = Mathf.Clamp(zoomedAmmount, -1.2f, 0f);
         currentFoV = defaultFoV + endFoV * zoomedAmmount;
 
         cam.fieldOfView = currentFoV;

@@ -12,6 +12,8 @@ public enum PlayerState
 public class PlayerController : MonoBehaviour
 {
     private PlayerState state;
+    private Animator animator;
+
     void Start()
     {
         state = PlayerState.notAiming;
