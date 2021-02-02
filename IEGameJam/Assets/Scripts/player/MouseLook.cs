@@ -13,14 +13,18 @@ public class MouseLook : MonoBehaviour
     private float defaultFoV = 60f;
     private float zoomedAmmount;
 
-    private Transform plr;
+    private Transform plrTransform;
     private Camera cam;
+    private PlayerController plrController;
+
     [SerializeField] private Image crosshair;
 
     void Start()
     {
-        plr = transform.parent.transform;
         Cursor.lockState = CursorLockMode.Locked;
+
+        plrTransform = transform.parent.transform;
+        plrController = FindObjectOfType<PlayerController>();
         cam = GetComponent<Camera>();
     }
 
@@ -36,19 +40,28 @@ public class MouseLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        plr.Rotate(Vector3.up * mouseX);
+        plrTransform.Rotate(Vector3.up * mouseX);
 
         if (mouse1)
         {
-            zoomedAmmount += -Time.deltaTime * 10;
-            sensitivity = 150;
-            crosshair.enabled = false;
+            if (plrController.GetState() != PlayerState.dead && plrController.GetState() != PlayerState.won)
+            {
+                zoomedAmmount += -Time.deltaTime * 10;
+                sensitivity = 150;
+                crosshair.enabled = false;
+                plrController.SetState(PlayerState.aiming);
+            }
         }
         else
         {
             zoomedAmmount += Time.deltaTime * 10;
             sensitivity = 300f;
             crosshair.enabled = true;
+
+            if (currentFoV == defaultFoV)
+            {
+                plrController.SetState(PlayerState.notAiming);
+            }
         }
 
         zoomedAmmount = Mathf.Clamp(zoomedAmmount, -1.4f, 0f);
