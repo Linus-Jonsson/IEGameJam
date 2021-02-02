@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
-    [SerializeField]private float sensitivity;
-    private float startSensitivity;
+    private float sensitivity;
+    [SerializeField] private float startSensitivity;
     private float xRotation = 0f;
 
     private float endFoV = 30f;
@@ -23,8 +23,6 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-
-        startSensitivity = sensitivity;
 
         plrTransform = transform.parent.transform;
         plrController = FindObjectOfType<PlayerController>();
@@ -50,7 +48,7 @@ public class MouseLook : MonoBehaviour
             if (plrController.GetState() != PlayerState.dead && plrController.GetState() != PlayerState.won)
             {
                 zoomedAmmount += -Time.deltaTime * 10;
-                sensitivity = 125f;
+                sensitivity = startSensitivity * 0.3f;
                 crosshair.enabled = false;
                 plrController.SetState(PlayerState.aiming);
             }
@@ -62,10 +60,12 @@ public class MouseLook : MonoBehaviour
 
             if (currentFoV == defaultFoV)
             {
+                sensitivity = startSensitivity;
                 plrController.SetState(PlayerState.notAiming);
             }
         }
 
+        
         zoomedAmmount = Mathf.Clamp(zoomedAmmount, -1.2f, 0f);
         currentFoV = defaultFoV + endFoV * zoomedAmmount;
 
