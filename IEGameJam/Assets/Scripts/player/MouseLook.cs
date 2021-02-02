@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseLook : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class MouseLook : MonoBehaviour
 
     private Transform plr;
     private Camera cam;
+    [SerializeField] private Image crosshair;
 
     void Start()
     {
@@ -40,11 +42,13 @@ public class MouseLook : MonoBehaviour
         {
             zoomedAmmount += -Time.deltaTime * 10;
             sensitivity = 150;
+            crosshair.enabled = false;
         }
         else
         {
             zoomedAmmount += Time.deltaTime * 10;
             sensitivity = 300f;
+            crosshair.enabled = true;
         }
 
         zoomedAmmount = Mathf.Clamp(zoomedAmmount, -1.4f, 0f);
