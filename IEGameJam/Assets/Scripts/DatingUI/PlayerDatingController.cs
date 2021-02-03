@@ -10,7 +10,7 @@ public class PlayerDatingController : MonoBehaviour
 {
     [SerializeField] float replyDuration = 5.0f;
 
-    public int playerResponse = 0; //0 = None, 1 = Good, 2 = Bad (Remake into Enums?)
+    public int playerResponse = 0; //0 = None, 1 = Good, 2 = Bad (Remake into Enums later?)
     public int dateInterest = 0;
 
     DateDialogueController dateDialogueController;

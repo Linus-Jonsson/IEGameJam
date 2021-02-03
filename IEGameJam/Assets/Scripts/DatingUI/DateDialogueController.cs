@@ -11,9 +11,13 @@ public class DateDialogueController : DateDialogueTrees
     [SerializeField] TMP_Text dateText = null;
     [SerializeField] float dateTextSpeed = 2.0f;
     [SerializeField] float timeBetweenDateLines = 1.0f;
+    
     [SerializeField] RawImage dateSplash = null;
     [SerializeField] GameObject playerButtons = null;
+    
     [SerializeField] int questionLimit = 5;
+    [SerializeField] int dateInterestWinState = 3;
+    
     [SerializeField] GameObject brokenHeartFX = null;
     [SerializeField] GameObject heartFX = null;
 
@@ -21,10 +25,12 @@ public class DateDialogueController : DateDialogueTrees
     int amountOfQuestionsAsked = 0;
     
     PlayerDatingController playerDatingController;
+    GameLoopController gameLoopController;
 
     void Awake()
     {
         playerDatingController = GetComponent<PlayerDatingController>();
+        gameLoopController = FindObjectOfType<GameLoopController>();
         FillDialogueTrees();
     }
 
@@ -40,7 +46,6 @@ public class DateDialogueController : DateDialogueTrees
         while (amountOfQuestionsAsked < questionLimit)
         {
             yield return StartCoroutine(DateLine(dateText));
-            yield return new WaitForSeconds(0.5f);
             playerButtons.SetActive(true);
             yield return StartCoroutine(playerDatingController.GetReply());
             playerButtons.SetActive(false);
@@ -51,13 +56,20 @@ public class DateDialogueController : DateDialogueTrees
             yield return new WaitForSeconds(timeBetweenDateLines);
             DateReactionFX();
             yield return StartCoroutine(DateLine(dateText));
-            yield return new WaitForSeconds(timeBetweenDateLines);
             dateSplash.enabled = false;
             dateText.maxVisibleCharacters = 0;
+            if (playerDatingController.dateInterest >= dateInterestWinState)
+            {
+                dateText.text = lastLineWin;
+                yield return new WaitForSeconds(timeBetweenDateLines);
+                yield return StartCoroutine(DateLine(dateText));
+                gameLoopController.HandleWinState();
+            }
             dateText.text = DateQuestionGenerator();
             yield return new WaitForSeconds(timeBetweenDateLines * 2);
             amountOfQuestionsAsked += 1;
         }
+        
         Debug.Log("THE END!");
     }
 
@@ -74,6 +86,7 @@ public class DateDialogueController : DateDialogueTrees
             counter += 1;
             yield return new WaitForSeconds(0.1f / dateTextSpeed);
         }
+        yield return new WaitForSeconds(timeBetweenDateLines);
     }
     
     string DateQuestionGenerator()
