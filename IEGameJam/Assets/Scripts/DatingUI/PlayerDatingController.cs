@@ -8,13 +8,13 @@ using UnityEngine.UI;
 
 public class PlayerDatingController : MonoBehaviour
 {
-    [SerializeField] GameObject playerReplySymbols = null;
+    public GameObject playerReplySymbols = null;
     [SerializeField] float replyTimeLimit = 5.0f;
 
     public int playerResponse = 0; //0 = Bad, 1 = Good, 2 = Neutral
     public int dateInterest = 0;
 
-    bool playerCanReply;
+    public bool playerCanReply;
     
     DateDialogueController dateDialogueController;
 

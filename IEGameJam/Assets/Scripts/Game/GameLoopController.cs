@@ -12,8 +12,14 @@ public class GameLoopController : MonoBehaviour
     [SerializeField] GameObject loseText = null;
     [SerializeField] GameObject deathText = null;
 
-    bool gameInEndScreens = false;
+    bool gameInEndScreens;
 
+    PlayerDatingController playerDatingController;
+
+    void Awake()
+    {
+        playerDatingController = FindObjectOfType<PlayerDatingController>();
+    }
     void Update()
     {
         if (gameInEndScreens) return;
@@ -23,6 +29,7 @@ public class GameLoopController : MonoBehaviour
 
     public void HandleWinState()
     {
+        playerDatingController.playerCanReply = false;
         gameInEndScreens = true;
         stateScreens.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
@@ -32,6 +39,7 @@ public class GameLoopController : MonoBehaviour
     
     public void HandleLoseState()
     {
+        playerDatingController.playerCanReply = false;
         gameInEndScreens = true;
         stateScreens.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
@@ -41,6 +49,7 @@ public class GameLoopController : MonoBehaviour
     
     private void PauseGame()
     {
+        playerDatingController.playerCanReply = false;
         pauseScreen.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
@@ -49,6 +58,8 @@ public class GameLoopController : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1f;
+        if (playerDatingController.playerReplySymbols.activeSelf)
+            playerDatingController.playerCanReply = true;
         Cursor.lockState = CursorLockMode.Locked;
         pauseScreen.SetActive(false);
     }

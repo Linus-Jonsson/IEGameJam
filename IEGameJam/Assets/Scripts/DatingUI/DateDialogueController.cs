@@ -13,7 +13,7 @@ public class DateDialogueController : DateDialogueTrees
     [SerializeField] float timeBetweenDateLines = 1.0f;
     [SerializeField] float timeBetweenSplashAndText = 0.2f;
     
-    [SerializeField] RawImage dateSplash = null;
+    [SerializeField] Image dateSplash = null;
 
     [SerializeField] int questionLimit = 5;
     [SerializeField] int dateInterestWinState = 3;
@@ -137,7 +137,7 @@ public class DateDialogueController : DateDialogueTrees
 
     private void DateReactionFX()
     {
-        Vector3 offset = new Vector3(-2, 0, 0);
+        Vector3 offset = new Vector3(-0.9f, 2.3f, 3.0f);
         if (playerDatingController.playerResponse == 0)
             Instantiate(brokenHeartFX, transform.position + offset, Quaternion.identity);
         else if (playerDatingController.playerResponse == 1)
