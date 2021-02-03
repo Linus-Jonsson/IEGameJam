@@ -11,6 +11,8 @@ public class DateDialogueTrees : MonoBehaviour
     internal List<string> dateAngryResponse = new List<string>();
     internal List<string> datePositiveResponse = new List<string>();
     internal List<string> dateNegativeResponse = new List<string>();
+    internal string lastLineWin;
+    internal string lastLineLose;
 
     internal void FillDialogueTrees()
     {
@@ -49,11 +51,12 @@ public class DateDialogueTrees : MonoBehaviour
         
         //Response when the player gives a reply that is rewarded
         datePositiveResponse.Add("Wow, that's great!");
-        datePositiveResponse.Add("Amazing!");
-        datePositiveResponse.Add("Cool!");
+        datePositiveResponse.Add("Amazing! I think I like you even more now");
+        datePositiveResponse.Add("Cool, you seem to be a good person");
         datePositiveResponse.Add("I was hoping you'd say that!");
-        datePositiveResponse.Add("Lovely!");
-        datePositiveResponse.Add("Perfect!");
+        datePositiveResponse.Add("That's terrific!");
+        datePositiveResponse.Add("You are just perfect!");
+        datePositiveResponse.Add("Really..? I LOVE it!");
         
         //Response when the player gives a reply that is not rewarded
         dateNegativeResponse.Add("That's too bad...");
@@ -62,21 +65,11 @@ public class DateDialogueTrees : MonoBehaviour
         dateNegativeResponse.Add("Ok, sorry to hear that...");
         dateNegativeResponse.Add("Not exactly what I was hoping for.");
         dateNegativeResponse.Add("Maybe you're not the one I'm looking for...");
-    }
-
-    internal void DebugDialogueTrees()
-    {
-        foreach (var VARIABLE in firstLine)
-            Debug.Log(VARIABLE);
-        foreach (var VARIABLE in dateQuestionsPositive)
-            Debug.Log(VARIABLE);
-        foreach (var VARIABLE in dateQuestionsNegative)
-            Debug.Log(VARIABLE);
-        foreach (var VARIABLE in dateAngryResponse)
-            Debug.Log(VARIABLE);
-        foreach (var VARIABLE in datePositiveResponse)
-            Debug.Log(VARIABLE);
-        foreach (var VARIABLE in dateNegativeResponse)
-            Debug.Log(VARIABLE);
+        
+        //Final line from date if date's affection is high enough
+        lastLineWin = "You know what? If we're still alive tomorrow I would LOOOVE another date!!";
+        
+        //Final line from date if date's affection is to low
+        lastLineLose = "You know what!?! I'm tired of this shit, please stay away from me!!";
     }
 }

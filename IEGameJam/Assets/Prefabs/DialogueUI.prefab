@@ -545,9 +545,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dateText: {fileID: 4985455276433848819}
   dateTextSpeed: 2
+  timeBetweenDateLines: 1
   dateSplash: {fileID: 4985455275226657870}
   playerButtons: {fileID: 6940617749232469125}
-  questionLimit: 15
+  questionLimit: 5
+  dateInterestWinState: 3
   brokenHeartFX: {fileID: 100006, guid: bcaff8fc36e95584bb27cc3cf7c6cb14, type: 3}
   heartFX: {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
   positiveReplyIsRewarded: 0
