@@ -12,16 +12,18 @@ public class GameLoopController : MonoBehaviour
     [SerializeField] GameObject loseText = null;
     [SerializeField] GameObject deathText = null;
 
-    //bool gamePaused;
+    bool gameInEndScreens = false;
 
     void Update()
     {
+        if (gameInEndScreens) return;
         if (Input.GetKeyDown(KeyCode.Escape))
             PauseGame();
     }
 
     public void HandleWinState()
     {
+        gameInEndScreens = true;
         stateScreens.SetActive(true);
         winText.SetActive(true);
         Time.timeScale = 0f;
@@ -29,6 +31,7 @@ public class GameLoopController : MonoBehaviour
     
     public void HandleLoseState()
     {
+        gameInEndScreens = true;
         stateScreens.SetActive(true);
         loseText.SetActive(true);
         Time.timeScale = 0f;

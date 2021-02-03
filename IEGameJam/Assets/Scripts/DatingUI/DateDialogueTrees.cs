@@ -18,9 +18,9 @@ public class DateDialogueTrees : MonoBehaviour
     {
         //Even numbers are questions where a positive reply is rewarded
         firstLine[0] = "Hello! We finally meet, are you also excited to be here?";
-        firstLine[1] = "Hey! You seem VERY exciting. Would you call yourself a dangerous person?";
+        firstLine[1] = "Hey, we're here, first date. I hope you're not an axe murderer! Haha... Eh... Are you?";
         firstLine[2] = "Hi! I have a great feeling about this. Have you also been longing for this day?";
-        firstLine[3] = "Hi! I'm actually a little nervous. Be honest, do you regret coming here?";
+        firstLine[3] = "Ok, I'm actually a little nervous now that we're here. Be honest, do you regret coming here?";
         
         //Questions where a positive reply from the player is rewarded
         dateQuestionsPositive.Add("Do you think it's important to be kind?");
@@ -32,6 +32,8 @@ public class DateDialogueTrees : MonoBehaviour
         dateQuestionsPositive.Add("Do you care about the environment?");
         dateQuestionsPositive.Add("Is TOOL probably the best band in the world?");
         dateQuestionsPositive.Add("Would you kiss on the first date?");
+        dateQuestionsPositive.Add("Have you ever made someone breakfast in bed??");
+        dateQuestionsPositive.Add("Have you ever written someone a love poem?");
         
         //Questions where a negative reply from the player is rewarded
         dateQuestionsNegative.Add("Is personal greed important to you?");
@@ -43,6 +45,8 @@ public class DateDialogueTrees : MonoBehaviour
         dateQuestionsNegative.Add("Have you ever killed anyone?");
         dateQuestionsNegative.Add("Will you ever grow up?");
         dateQuestionsNegative.Add("Have you ever told someone you love them even though you don't?");
+        dateQuestionsNegative.Add("Have you ever dumped someone over text message?");
+        dateQuestionsNegative.Add("Is your arm bigger than your thigh?");
         
         //Response when the player doesn't give a reply within set time limit
         dateAngryResponse.Add("Hello, are you listening?!");
