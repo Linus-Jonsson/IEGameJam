@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject prefab;
     [SerializeField] private List<GameObject> spawnPositions;
     [SerializeField] private float spawnDelay;
+    [SerializeField] private bool randomSpawnTimer;
 
     private void Start()
     {
