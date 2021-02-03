@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public void UpdateHealth(int ModifyValue ) {
         health += ModifyValue;
         if (health <= 0) {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

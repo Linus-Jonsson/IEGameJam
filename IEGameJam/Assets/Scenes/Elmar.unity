@@ -1747,6 +1747,7 @@ MonoBehaviour:
   - {fileID: 84326384}
   - {fileID: 788636213}
   spawnDelay: 1.3
+  randomSpawnTimer: 0
 --- !u!4 &1356187976
 Transform:
   m_ObjectHideFlags: 0
@@ -2031,18 +2032,6 @@ PrefabInstance:
       propertyPath: playerReplySymbols
       value: 
       objectReference: {fileID: 628592026}
-    - target: {fileID: 3778101341306534477, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -906
-      objectReference: {fileID: 0}
-    - target: {fileID: 3778101341306534477, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -185
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985455275226657871, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -747
-      objectReference: {fileID: 0}
     - target: {fileID: 4985455275422667115, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2138,10 +2127,6 @@ PrefabInstance:
     - target: {fileID: 4985455275422667119, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
       propertyPath: m_Name
       value: DialogueUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985455276433848820, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
