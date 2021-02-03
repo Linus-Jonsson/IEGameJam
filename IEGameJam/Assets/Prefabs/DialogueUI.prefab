@@ -492,7 +492,7 @@ MonoBehaviour:
   timeBetweenSplashAndText: 0.3
   dateSplash: {fileID: 4985455275226657870}
   playerButtons: {fileID: 6940617749232469125}
-  questionLimit: 5
+  questionLimit: 7
   dateInterestWinState: 3
   dateInterestLoseState: -2
   brokenHeartFX: {fileID: 100006, guid: bcaff8fc36e95584bb27cc3cf7c6cb14, type: 3}

@@ -96,13 +96,15 @@ public class DateDialogueController : DateDialogueTrees
         if (randomIndex < dateQuestionsPositive.Count)
         {
             dateQuestion = dateQuestionsPositive[randomIndex];
-            dateQuestionsPositive.RemoveAt(randomIndex);
+            if (dateQuestionsPositive.Count > 1)
+                dateQuestionsPositive.RemoveAt(randomIndex);
             positiveReplyIsRewarded = true;
         }
         else
         {
             dateQuestion = dateQuestionsNegative[randomIndex % dateQuestionsNegative.Count];
-            dateQuestionsNegative.RemoveAt(randomIndex % dateQuestionsNegative.Count); 
+            if (dateQuestionsNegative.Count > 1)
+                dateQuestionsNegative.RemoveAt(randomIndex % dateQuestionsNegative.Count); 
             positiveReplyIsRewarded = false;
         }
         return dateQuestion;
@@ -117,17 +119,20 @@ public class DateDialogueController : DateDialogueTrees
             case 0:
                 randomIndex = new Random().Next(dateAngryResponse.Count - 1);
                 dateReply = dateAngryResponse[randomIndex];
-                dateAngryResponse.RemoveAt(randomIndex);
+                if (dateAngryResponse.Count > 1)
+                    dateAngryResponse.RemoveAt(randomIndex);
                 break; 
             case 1:
                 randomIndex = new Random().Next(datePositiveResponse.Count - 1);
                 dateReply = datePositiveResponse[randomIndex];
-                datePositiveResponse.RemoveAt(randomIndex);
+                if (datePositiveResponse.Count > 1)
+                    datePositiveResponse.RemoveAt(randomIndex);
                 break;
             case 2:
                 randomIndex = new Random().Next(dateNegativeResponse.Count - 1);
                 dateReply = dateNegativeResponse[randomIndex];
-                dateNegativeResponse.RemoveAt(randomIndex);
+                if (dateNegativeResponse.Count > 1)
+                    dateNegativeResponse.RemoveAt(randomIndex);
                 break;
         }
         return dateReply;
