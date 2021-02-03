@@ -13,6 +13,7 @@ public class zombieController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        destination = GameObject.Find("Plr").transform;
     }
 
     void Update()

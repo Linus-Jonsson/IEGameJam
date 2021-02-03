@@ -25,6 +25,7 @@ public class GameLoopController : MonoBehaviour
     {
         gameInEndScreens = true;
         stateScreens.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         winText.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -33,6 +34,7 @@ public class GameLoopController : MonoBehaviour
     {
         gameInEndScreens = true;
         stateScreens.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         loseText.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -40,12 +42,14 @@ public class GameLoopController : MonoBehaviour
     private void PauseGame()
     {
         pauseScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
     }
     
     public void ResumeGame()
     {
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
         pauseScreen.SetActive(false);
     }
     
