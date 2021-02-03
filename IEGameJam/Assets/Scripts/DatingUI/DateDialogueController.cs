@@ -11,12 +11,14 @@ public class DateDialogueController : DateDialogueTrees
     [SerializeField] TMP_Text dateText = null;
     [SerializeField] float dateTextSpeed = 2.0f;
     [SerializeField] float timeBetweenDateLines = 1.0f;
+    [SerializeField] float timeBetweenSplashAndText = 0.2f;
     
     [SerializeField] RawImage dateSplash = null;
     [SerializeField] GameObject playerButtons = null;
     
     [SerializeField] int questionLimit = 5;
     [SerializeField] int dateInterestWinState = 3;
+    [SerializeField] int dateInterestLoseState = -2;
     
     [SerializeField] GameObject brokenHeartFX = null;
     [SerializeField] GameObject heartFX = null;
@@ -49,34 +51,32 @@ public class DateDialogueController : DateDialogueTrees
             playerButtons.SetActive(true);
             yield return StartCoroutine(playerDatingController.GetReply());
             playerButtons.SetActive(false);
-            yield return new WaitForSeconds(0.1f);
-            dateSplash.enabled = false;
+            yield return new WaitForSeconds(timeBetweenSplashAndText);
             dateText.maxVisibleCharacters = 0;
+            yield return new WaitForSeconds(timeBetweenSplashAndText);
+            dateSplash.enabled = false;
             dateText.text = DateReplyGenerator();
             yield return new WaitForSeconds(timeBetweenDateLines);
             DateReactionFX();
             yield return StartCoroutine(DateLine(dateText));
-            dateSplash.enabled = false;
             dateText.maxVisibleCharacters = 0;
-            if (playerDatingController.dateInterest >= dateInterestWinState)
-            {
-                dateText.text = lastLineWin;
-                yield return new WaitForSeconds(timeBetweenDateLines);
-                yield return StartCoroutine(DateLine(dateText));
-                gameLoopController.HandleWinState();
-            }
+            yield return new WaitForSeconds(timeBetweenSplashAndText);
+            dateSplash.enabled = false;
+            yield return StartCoroutine(CheckForWinOrLoseState());
             dateText.text = DateQuestionGenerator();
             yield return new WaitForSeconds(timeBetweenDateLines * 2);
             amountOfQuestionsAsked += 1;
         }
-        
-        Debug.Log("THE END!");
+        dateText.text = lastLineLose;
+        yield return new WaitForSeconds(timeBetweenDateLines);
+        yield return StartCoroutine(DateLine(dateText));
+        gameLoopController.HandleLoseState();
     }
 
     private IEnumerator DateLine(TMP_Text text)
     {
         dateSplash.enabled = true;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(timeBetweenSplashAndText);
         int totalVisibleCharacters = text.textInfo.characterCount;
         int counter = 0;
         while (counter < totalVisibleCharacters + 1)
@@ -86,7 +86,7 @@ public class DateDialogueController : DateDialogueTrees
             counter += 1;
             yield return new WaitForSeconds(0.1f / dateTextSpeed);
         }
-        yield return new WaitForSeconds(timeBetweenDateLines);
+        yield return new WaitForSeconds(1);
     }
     
     string DateQuestionGenerator()
@@ -140,5 +140,23 @@ public class DateDialogueController : DateDialogueTrees
             Instantiate(brokenHeartFX, transform.position + offset, Quaternion.identity);
         else if (playerDatingController.playerResponse == 1)
             Instantiate(heartFX, transform.position + offset, Quaternion.identity);
+    }
+
+    IEnumerator CheckForWinOrLoseState()
+    {
+        if (playerDatingController.dateInterest >= dateInterestWinState)
+        {
+            dateText.text = lastLineWin;
+            yield return new WaitForSeconds(timeBetweenDateLines);
+            yield return StartCoroutine(DateLine(dateText));
+            gameLoopController.HandleWinState();
+        }
+        else if (playerDatingController.dateInterest <= dateInterestLoseState)
+        {
+            dateText.text = lastLineLose;
+            yield return new WaitForSeconds(timeBetweenDateLines);
+            yield return StartCoroutine(DateLine(dateText));
+            gameLoopController.HandleLoseState();
+        }
     }
 }

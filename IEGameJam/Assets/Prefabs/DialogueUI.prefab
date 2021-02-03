@@ -489,10 +489,12 @@ MonoBehaviour:
   dateText: {fileID: 4985455276433848819}
   dateTextSpeed: 2
   timeBetweenDateLines: 1
+  timeBetweenSplashAndText: 0.3
   dateSplash: {fileID: 4985455275226657870}
   playerButtons: {fileID: 6940617749232469125}
   questionLimit: 5
   dateInterestWinState: 3
+  dateInterestLoseState: -2
   brokenHeartFX: {fileID: 100006, guid: bcaff8fc36e95584bb27cc3cf7c6cb14, type: 3}
   heartFX: {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
   positiveReplyIsRewarded: 0
@@ -569,7 +571,7 @@ GameObject:
   - component: {fileID: 4985455276433848818}
   - component: {fileID: 4985455276433848819}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DateText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DateLines
+  m_text: DateText
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

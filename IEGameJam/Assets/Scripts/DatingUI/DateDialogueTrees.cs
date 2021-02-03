@@ -51,8 +51,8 @@ public class DateDialogueTrees : MonoBehaviour
         
         //Response when the player gives a reply that is rewarded
         datePositiveResponse.Add("Wow, that's great!");
-        datePositiveResponse.Add("Amazing! I think I like you even more now");
-        datePositiveResponse.Add("Cool, you seem to be a good person");
+        datePositiveResponse.Add("Amazing! I think I like you even more now.");
+        datePositiveResponse.Add("Cool, you seem to be a good person.");
         datePositiveResponse.Add("I was hoping you'd say that!");
         datePositiveResponse.Add("That's terrific!");
         datePositiveResponse.Add("You are just perfect!");
@@ -60,8 +60,8 @@ public class DateDialogueTrees : MonoBehaviour
         
         //Response when the player gives a reply that is not rewarded
         dateNegativeResponse.Add("That's too bad...");
-        dateNegativeResponse.Add("Oh, really?");
-        dateNegativeResponse.Add("What!?");
+        dateNegativeResponse.Add("Oh, really? Not great.");
+        dateNegativeResponse.Add("What? How old are you?!");
         dateNegativeResponse.Add("Ok, sorry to hear that...");
         dateNegativeResponse.Add("Not exactly what I was hoping for.");
         dateNegativeResponse.Add("Maybe you're not the one I'm looking for...");
@@ -70,6 +70,6 @@ public class DateDialogueTrees : MonoBehaviour
         lastLineWin = "You know what? If we're still alive tomorrow I would LOOOVE another date!!";
         
         //Final line from date if date's affection is to low
-        lastLineLose = "You know what!?! I'm tired of this shit, please stay away from me!!";
+        lastLineLose = "You know what!?! I'm tired of this shit, just stay away from me!!";
     }
 }

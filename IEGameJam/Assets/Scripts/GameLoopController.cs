@@ -24,8 +24,14 @@ public class GameLoopController : MonoBehaviour
         Time.timeScale = 0f;
     }
     
-    private void ReloadCurrentScene()
+    public void ReloadCurrentScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
