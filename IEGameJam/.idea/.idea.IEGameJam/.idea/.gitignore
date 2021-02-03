@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.IEGameJam.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Users\linus\Documents\GitHub\IEGameJam\IEGameJam\.idea\.idea.IEGameJam\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
