@@ -13,6 +13,8 @@ public class PlayerDatingController : MonoBehaviour
     public int playerResponse = 0; //0 = None, 1 = Good, 2 = Bad (Remake into Enums later?)
     public int dateInterest = 0;
 
+    bool playerCanReply;
+    
     DateDialogueController dateDialogueController;
 
     void Awake()
@@ -20,8 +22,19 @@ public class PlayerDatingController : MonoBehaviour
         dateDialogueController = GetComponent<DateDialogueController>();
     }
 
+    void Update()
+    {
+        if (!playerCanReply) return;
+        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            PlayerRepliesYes();
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+            PlayerRepliesNo();
+    }
+
     public IEnumerator GetReply()
     {
+        playerCanReply = true;
         playerResponse = 0;
         float timeToReply = 0;
         while (playerResponse == 0 && timeToReply < replyDuration)
@@ -33,6 +46,7 @@ public class PlayerDatingController : MonoBehaviour
             dateInterest -= 1;
         else if (playerResponse == 1)
             dateInterest += 1;
+        playerCanReply = false;
     }
 
     public void PlayerRepliesYes()

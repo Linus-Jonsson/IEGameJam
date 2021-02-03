@@ -19,7 +19,9 @@ public class GameLoopController : MonoBehaviour
     
     public void HandleLoseState()
     {
-        //Handle lose stuff
+        stateScreens.SetActive(true);
+        loseText.SetActive(true);
+        Time.timeScale = 0f;
     }
     
     private void ReloadCurrentScene()
