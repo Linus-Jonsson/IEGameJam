@@ -14,8 +14,7 @@ public class DateDialogueController : DateDialogueTrees
     [SerializeField] float timeBetweenSplashAndText = 0.2f;
     
     [SerializeField] RawImage dateSplash = null;
-    [SerializeField] GameObject playerButtons = null;
-    
+
     [SerializeField] int questionLimit = 5;
     [SerializeField] int dateInterestWinState = 3;
     [SerializeField] int dateInterestLoseState = -2;
@@ -48,9 +47,7 @@ public class DateDialogueController : DateDialogueTrees
         while (amountOfQuestionsAsked < questionLimit)
         {
             yield return StartCoroutine(DateLine(dateText));
-            playerButtons.SetActive(true);
             yield return StartCoroutine(playerDatingController.GetReply());
-            playerButtons.SetActive(false);
             yield return new WaitForSeconds(timeBetweenSplashAndText);
             dateText.maxVisibleCharacters = 0;
             yield return new WaitForSeconds(timeBetweenSplashAndText);

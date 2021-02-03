@@ -8,9 +8,10 @@ using UnityEngine.UI;
 
 public class PlayerDatingController : MonoBehaviour
 {
-    [SerializeField] float replyDuration = 5.0f;
+    [SerializeField] GameObject playerReplySymbols = null;
+    [SerializeField] float replyTimeLimit = 5.0f;
 
-    public int playerResponse = 0; //0 = None, 1 = Good, 2 = Bad (Remake into Enums later?)
+    public int playerResponse = 0; //0 = Bad, 1 = Good, 2 = Neutral
     public int dateInterest = 0;
 
     bool playerCanReply;
@@ -34,12 +35,13 @@ public class PlayerDatingController : MonoBehaviour
 
     public IEnumerator GetReply()
     {
+        playerReplySymbols.SetActive(true);
         playerCanReply = true;
         playerResponse = 0;
-        float timeToReply = 0;
-        while (playerResponse == 0 && timeToReply < replyDuration)
+        float replyDuration = 0;
+        while (playerResponse == 0 && replyDuration < replyTimeLimit)
         {
-            timeToReply += Time.deltaTime;
+            replyDuration += Time.deltaTime;
             yield return null;
         }
         if (playerResponse == 0)
@@ -47,14 +49,15 @@ public class PlayerDatingController : MonoBehaviour
         else if (playerResponse == 1)
             dateInterest += 1;
         playerCanReply = false;
+        playerReplySymbols.SetActive(false);
     }
 
-    public void PlayerRepliesYes()
+    void PlayerRepliesYes()
     {
         playerResponse = dateDialogueController.positiveReplyIsRewarded ? 1 : 2;
     }
-    
-    public void PlayerRepliesNo()
+
+    void PlayerRepliesNo()
     {
         playerResponse = dateDialogueController.positiveReplyIsRewarded ? 2 : 1;
     }
