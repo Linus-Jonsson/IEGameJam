@@ -8,15 +8,22 @@ public class Shoot : MonoBehaviour
     [SerializeField] private GameObject bulletHolePrefab;
     [SerializeField] private int damage;
     [SerializeField] private float shootRange;
+    [Range(.5f, 20f)]
     [SerializeField] private float shootSpeed;
     [SerializeField] private LayerMask hitMask;
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private ParticleSystem smoke;
     [SerializeField] private Animator uziAnimator;
-    [HideInInspector] public bool isShooting;
+    public bool isShooting;
     private float timer;
 
     private Vector3 midScreen;
+    private GameObject BulletHoleHolder;
+
+    private void Start()
+    {
+        BulletHoleHolder = new GameObject("Bullet Hole Holder");
+    }
 
     private void Update()
     {
@@ -24,6 +31,7 @@ public class Shoot : MonoBehaviour
         timer += Time.deltaTime * shootSpeed;
         if (Input.GetMouseButton(0) && timer >= 1f)
         {
+            FindObjectOfType<AudioManager>().Play("f");
             midScreen = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
             isShooting = true;
             muzzleFlash.Play();
@@ -35,11 +43,14 @@ public class Shoot : MonoBehaviour
                 {
                     if (hit.collider.tag == "Wall")
                     {
-                        Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                        GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.001f, Quaternion.identity) as GameObject;
+                        bulletHole.transform.SetParent(BulletHoleHolder.transform);
+                        Destroy(bulletHole, 7.5f);
                     }
                     if (hit.collider.tag == "Enemy")
                     {
                         hit.collider.GetComponent<Health>().UpdateHealth(-damage);
+                        //AudioManager.instance.Play("desert eagle");
                     }
                 }
             }

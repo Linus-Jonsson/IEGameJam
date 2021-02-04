@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
                 s.timer += Time.deltaTime * s.spawnSpeed;
                 if (s.timer >= 1f)
                 {
-                    Instantiate(prefab, s.Location.transform.position, Quaternion.identity);
+                     Instantiate(prefab, s.Location.transform.position, Quaternion.identity);
                     if (s.randomSpawnTimer == true)
                     {
                         s.spawnSpeed = UnityEngine.Random.Range(s.Minimum, s.Maximum);
