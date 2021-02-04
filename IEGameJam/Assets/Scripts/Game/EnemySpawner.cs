@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,27 +6,49 @@ using UnityEngine;
 [SerializeField]
 public class EnemySpawner : MonoBehaviour
 {
+    [Header("every spawn location has its own spawn speed and information")]
+    [Header("")]
+
     [SerializeField] private GameObject prefab;
-    [SerializeField] private List<GameObject> spawnPositions;
-    [SerializeField] private float spawnDelay;
-    [SerializeField] private bool randomSpawnTimer;
+    public spawn[] spawns;
 
-    private void Start()
-    {
-        StartCoroutine(SpawnEnemy());
-    }
+    #region Singleton
+    public static EnemySpawner instance;
+    private void Awake() => instance = this;
+    #endregion
 
-    private IEnumerator SpawnEnemy()
+    private void Update()
     {
-        while (true)
+        foreach (spawn s in spawns)
         {
-            Instantiate(prefab, GetSpawnPosition(spawnPositions).transform.position,Quaternion.identity);
-            yield return new WaitForSeconds(spawnDelay);
+            s.timer += Time.deltaTime * s.spawnSpeed;
+            if (s.timer >= 1f)
+            {
+                Instantiate(prefab, s.Location.transform.position, Quaternion.identity);
+                if (s.randomSpawnTimer == true)
+                {
+                    s.spawnSpeed = Random.Range(.1f, 3f);
+                }
+                s.timer = 0;
+            }
         }
+        
     }
-
-    private GameObject GetSpawnPosition(List<GameObject> _spawnPositions) => _spawnPositions[Random.Range(0, spawnPositions.Count)];
 
 }
+
+[System.Serializable]
+public class spawn
+{
+    public string name;
+    public GameObject Location;
+    [Range(.1f, 3)]
+    public float spawnSpeed;
+    [Space]
+    public float timer;
+    public bool randomSpawnTimer;
+}
+
+//TODO: make the spawner so that every spawnpoint has its own timer where it is modifyed in one component 
 
 

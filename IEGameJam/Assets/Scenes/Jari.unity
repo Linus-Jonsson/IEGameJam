@@ -534,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053405816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.003269, y: -28.46985, z: 34.373302}
+  m_LocalPosition: {x: -6.76, y: -28.46985, z: 35.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370903166}
@@ -5812,7 +5812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796929682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.603269, y: -28.46985, z: 58.573303}
+  m_LocalPosition: {x: -6.84, y: -28.46985, z: 54.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370903166}
@@ -5831,7 +5831,7 @@ GameObject:
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5848,13 +5848,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1991770522}
-  spawnPositions:
-  - {fileID: 1053405816}
-  - {fileID: 1529272660}
-  - {fileID: 951256696}
-  - {fileID: 1796929682}
-  spawnDelay: 1
-  randomSpawnTimer: 0
+  spawns:
+  - name: location 1
+    Location: {fileID: 1796929682}
+    spawnSpeed: 0.5
+    timer: 0
+    randomSpawnTimer: 0
+  - name: location 2
+    Location: {fileID: 1053405816}
+    spawnSpeed: 1.5
+    timer: 0
+    randomSpawnTimer: 0
 --- !u!4 &1923991805
 Transform:
   m_ObjectHideFlags: 0
