@@ -17,6 +17,7 @@ public class MouseLook : MonoBehaviour
     private Transform plrTransform;
     private Camera cam;
     private PlayerController plrController;
+    private Shoot shootScript;
 
     [SerializeField] private Image crosshair;
 
@@ -27,6 +28,7 @@ public class MouseLook : MonoBehaviour
         plrTransform = transform.parent.transform;
         plrController = FindObjectOfType<PlayerController>();
         cam = GetComponent<Camera>();
+        shootScript = FindObjectOfType<Shoot>();
     }
 
     void Update()
@@ -47,10 +49,14 @@ public class MouseLook : MonoBehaviour
         {
             if (plrController.GetState() != PlayerState.dead && plrController.GetState() != PlayerState.won)
             {
-                zoomedAmmount += -Time.deltaTime * 10;
-                sensitivity = startSensitivity * 0.3f;
-                crosshair.enabled = false;
-                plrController.SetState(PlayerState.aiming);
+                if (shootScript.isShooting != true)
+                {
+                    sensitivity = startSensitivity * 0.3f;
+                    zoomedAmmount += -Time.deltaTime * 10;
+
+                    crosshair.enabled = false;
+                    plrController.SetState(PlayerState.aiming);
+                }
             }
         }
         else
