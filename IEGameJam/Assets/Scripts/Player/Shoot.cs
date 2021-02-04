@@ -13,6 +13,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private LayerMask hitMask;
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private ParticleSystem smoke;
+    [SerializeField] private GameObject bloodSplatter;
     [SerializeField] private Animator uziAnimator;
     public bool isShooting;
     private float timer;
@@ -51,7 +52,8 @@ public class Shoot : MonoBehaviour
                     if (hit.collider.tag == "Enemy")
                     {
                         hit.collider.GetComponent<Health>().UpdateHealth(-damage);
-                        
+                        var rot = Quaternion.FromToRotation(hit.point, transform.position);
+                        Instantiate(bloodSplatter, hit.point, rot);
                     }
                 }
             }

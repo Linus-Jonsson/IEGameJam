@@ -372,7 +372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135622278 stripped
 GameObject:
@@ -403,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6733187347570546371, guid: f98eea1ddcea5e343a85f52686fe93f0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6733187347570546371, guid: f98eea1ddcea5e343a85f52686fe93f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -671,6 +671,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4184457149691923163, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 003da87e2646809428b9275463abb55d, type: 3}
 --- !u!1 &452815097
@@ -715,6 +719,7 @@ MonoBehaviour:
     m_Bits: 64
   muzzleFlash: {fileID: 1097371242}
   smoke: {fileID: 309382794}
+  bloodSplatter: {fileID: 3658816020372589305, guid: 52c030f8c6eb21a488a100df42e3c7a6, type: 3}
   uziAnimator: {fileID: 236843847}
   isShooting: 0
 --- !u!114 &452815099
@@ -806,7 +811,7 @@ Transform:
   m_Children:
   - {fileID: 678731829}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 179.915, z: 0}
 --- !u!1 &490267563
 GameObject:
@@ -901,7 +906,7 @@ RectTransform:
   m_Children:
   - {fileID: 1220710327}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2439,7 +2444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1097371242 stripped
 ParticleSystem:
@@ -2939,7 +2944,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1557053014
 GameObject:
