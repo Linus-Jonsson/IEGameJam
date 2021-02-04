@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     [Header("Put the damage in positive numbers")]
+    [SerializeField] private GameObject bulletHolePrefab;
     [SerializeField] private int damage;
     [SerializeField] private float shootRange;
     [SerializeField] private float shootSpeed;
@@ -12,7 +13,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private ParticleSystem smoke;
     [SerializeField] private Animator uziAnimator;
-    public bool isShooting;
+    [HideInInspector] public bool isShooting;
     private float timer;
 
     private Vector3 midScreen;
@@ -32,7 +33,14 @@ public class Shoot : MonoBehaviour
             {
                 if (hit.collider != null)
                 {
-                    hit.collider.GetComponent<Health>().UpdateHealth(-damage);
+                    if (hit.collider.tag == "Wall")
+                    {
+                        Instantiate(bulletHolePrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                    }
+                    if (hit.collider.tag == "Enemy")
+                    {
+                        hit.collider.GetComponent<Health>().UpdateHealth(-damage);
+                    }
                 }
             }
             timer = 0;
