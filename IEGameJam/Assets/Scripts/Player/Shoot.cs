@@ -50,7 +50,7 @@ public class Shoot : MonoBehaviour
                     }
                     if (hit.collider.tag == "Enemy")
                     {
-                        hit.collider.GetComponent<ZombieHealth>().UpdateHealth(-damage);
+                        hit.collider.GetComponent<Health>().UpdateHealth(-damage);
                         
                     }
                 }
