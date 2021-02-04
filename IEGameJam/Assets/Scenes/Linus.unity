@@ -3515,7 +3515,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6213497006554909817, guid: f98eea1ddcea5e343a85f52686fe93f0, type: 3}
       propertyPath: m_Name
-      value: date@Sitting Idle
+      value: Date
       objectReference: {fileID: 0}
     - target: {fileID: 6733187347570546371, guid: f98eea1ddcea5e343a85f52686fe93f0, type: 3}
       propertyPath: m_RootOrder
