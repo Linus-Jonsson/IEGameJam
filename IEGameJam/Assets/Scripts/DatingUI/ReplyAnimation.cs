@@ -7,10 +7,18 @@ public class ReplyAnimation : MonoBehaviour
 {
     Animator animator;
     
-    void Awake()
+    void Start()
     {
         animator = GetComponent<Animator>();
     }
     
-    
+    public void SetAnimationTrigger(string triggerName)
+    {
+        animator.SetTrigger(triggerName);
+    }
+
+    public void InactivateGameObject()
+    {
+        gameObject.SetActive(false);
+    }
 }

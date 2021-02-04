@@ -894,6 +894,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2238401925759224404, guid: cecab3a0fc361984085531d98f0c1eca, type: 3}
   m_PrefabInstance: {fileID: 538687654}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &628592028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 628592029, guid: cecab3a0fc361984085531d98f0c1eca, type: 3}
+  m_PrefabInstance: {fileID: 538687654}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628592026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc204dd6cd5d95c4a852bd552444a32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &664435853
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,6 +2035,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1055792589, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
+      propertyPath: replyAnimation
+      value: 
+      objectReference: {fileID: 628592028}
     - target: {fileID: 1055792589, guid: 1e59a2d2074b1d84ba6fd92a015c9894, type: 3}
       propertyPath: playerReplySymbols
       value: 

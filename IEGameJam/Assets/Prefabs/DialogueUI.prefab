@@ -134,6 +134,7 @@ MonoBehaviour:
   playerResponse: 0
   dateInterest: 0
   playerCanReply: 0
+  replyAnimation: {fileID: 0}
 --- !u!114 &1055792585
 MonoBehaviour:
   m_ObjectHideFlags: 0
