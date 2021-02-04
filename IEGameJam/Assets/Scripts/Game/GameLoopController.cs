@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameLoopController : MonoBehaviour
 {
+    [SerializeField] GameObject startScreen = null;
     [SerializeField] GameObject pauseScreen = null;
     [SerializeField] GameObject stateScreens = null;
     [SerializeField] GameObject winText = null;
     [SerializeField] GameObject loseText = null;
     [SerializeField] GameObject deathText = null;
 
+    public bool gameInStartScreen = true;
     bool gameInEndScreens;
 
     PlayerDatingController playerDatingController;
@@ -20,9 +22,21 @@ public class GameLoopController : MonoBehaviour
     {
         playerDatingController = FindObjectOfType<PlayerDatingController>();
     }
+
+    void Start()
+    {
+        startScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+
     void Update()
     {
-        if (gameInEndScreens) return;
+        if (gameInStartScreen && Input.GetKeyDown(KeyCode.Space))
+            StartGame();
+        if (gameInStartScreen)
+            return;
+        if (gameInEndScreens)
+            return;
         if (Input.GetKeyDown(KeyCode.Escape))
             PauseGame();
     }
@@ -45,6 +59,14 @@ public class GameLoopController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         loseText.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    void StartGame()
+    {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        gameInStartScreen = false;
+        startScreen.SetActive(false);
     }
     
     private void PauseGame()

@@ -22,7 +22,7 @@ public class MouseLook : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked; - Init in StartGame() in GameLoopController
 
         plrTransform = transform.parent.transform;
         plrController = FindObjectOfType<PlayerController>();
