@@ -31,7 +31,7 @@ public class Shoot : MonoBehaviour
         timer += Time.deltaTime * shootSpeed;
         if (Input.GetMouseButton(0) && timer >= 1f)
         {
-            FindObjectOfType<AudioManager>().Play("shoot");
+            AudioManager.instance.Play("desert eagle");
             midScreen = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
             isShooting = true;
             muzzleFlash.Play();
@@ -50,7 +50,7 @@ public class Shoot : MonoBehaviour
                     if (hit.collider.tag == "Enemy")
                     {
                         hit.collider.GetComponent<Health>().UpdateHealth(-damage);
-                        //AudioManager.instance.Play("desert eagle");
+                        
                     }
                 }
             }
