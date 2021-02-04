@@ -1351,63 +1351,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &628530669
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5459299246892302085, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_Name
-      value: Sound Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -19.706846
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.87914
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.1555386
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
 --- !u!1 &665198707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3271110273e1c3a4db8e14cc064a2285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSensitivity: 600
+  startSensitivity: 400
   crosshair: {fileID: 1220710328}
 --- !u!81 &678731831
 AudioListener:
@@ -2582,33 +2525,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: sounds.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 53c2ff98ebe534f4e83a7168c50e5f38, type: 3}
-    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: deathZombie
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: sounds.Array.data[1].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 5459299246892302085, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
       propertyPath: m_Name
       value: Sound Manager
       objectReference: {fileID: 0}
     - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3232,19 +3155,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6213497006554909817, guid: f98eea1ddcea5e343a85f52686fe93f0, type: 3}
   m_PrefabInstance: {fileID: 172460160}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1498118861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498118860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: febb7a6c0681d894599f959bc01d5a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneIndex: 1
 --- !u!114 &1498118862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3304,7 +3214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1557053014
 GameObject:

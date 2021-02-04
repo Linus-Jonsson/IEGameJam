@@ -50,4 +50,10 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
     loop: 0
+  - name: deathZombie
+    clip: {fileID: 8300000, guid: 53c2ff98ebe534f4e83a7168c50e5f38, type: 3}
+    volume: 0.1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
   destroyOnNextLoad: 0
