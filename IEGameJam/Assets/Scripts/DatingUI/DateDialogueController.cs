@@ -153,6 +153,7 @@ public class DateDialogueController : DateDialogueTrees
             yield return new WaitForSeconds(timeBetweenDateLines);
             yield return StartCoroutine(DateLine(dateText));
             gameLoopController.HandleWinState();
+            yield return new WaitForSeconds(2f);
         }
         else if (playerDatingController.dateInterest <= dateInterestLoseState)
         {
@@ -161,6 +162,7 @@ public class DateDialogueController : DateDialogueTrees
             yield return new WaitForSeconds(timeBetweenDateLines);
             yield return StartCoroutine(DateLine(dateText));
             gameLoopController.HandleLoseState();
+            yield return new WaitForSeconds(2f);
         }
     }
 
