@@ -1088,6 +1088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a32619ae948d06840a1c729c6ce05c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletHolePrefab: {fileID: 0}
   damage: 10
   shootRange: 50
   shootSpeed: 6
@@ -2190,7 +2191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &990882092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2209,26 +2210,34 @@ MonoBehaviour:
     Location: {fileID: 514666310}
     spawnSpeed: 0.22
     timer: 0
-    randomSpawnTimer: 0
     OnOff: 0
+    randomSpawnTimer: 0
+    Minimum: 0
+    Maximum: 0
   - name: stairs
     Location: {fileID: 1575882136}
     spawnSpeed: 0.16
     timer: 0
-    randomSpawnTimer: 0
     OnOff: 0
+    randomSpawnTimer: 0
+    Minimum: 0
+    Maximum: 0
   - name: kitchen
     Location: {fileID: 2018313757}
     spawnSpeed: 0.19
     timer: 0
-    randomSpawnTimer: 0
     OnOff: 0
+    randomSpawnTimer: 0
+    Minimum: 0
+    Maximum: 0
   - name: toilets
     Location: {fileID: 1604009893}
     spawnSpeed: 0.17
     timer: 0
-    randomSpawnTimer: 0
     OnOff: 0
+    randomSpawnTimer: 0
+    Minimum: 0
+    Maximum: 0
 --- !u!4 &990882093
 Transform:
   m_ObjectHideFlags: 0
