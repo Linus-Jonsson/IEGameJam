@@ -155,7 +155,7 @@ MonoBehaviour:
   questionLimit: 15
   dateInterestWinState: 6
   dateInterestLoseState: -2
-  brokenHeartFX: {fileID: 100006, guid: bcaff8fc36e95584bb27cc3cf7c6cb14, type: 3}
+  angryFX: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   heartFX: {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
   positiveReplyIsRewarded: 0
 --- !u!223 &4985455275422667116

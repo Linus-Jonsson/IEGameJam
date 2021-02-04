@@ -19,7 +19,7 @@ public class DateDialogueController : DateDialogueTrees
     [SerializeField] int dateInterestWinState = 3;
     [SerializeField] int dateInterestLoseState = -2;
     
-    [SerializeField] GameObject brokenHeartFX = null;
+    [SerializeField] GameObject angryFX = null;
     [SerializeField] GameObject heartFX = null;
 
     public bool positiveReplyIsRewarded;
@@ -139,7 +139,7 @@ public class DateDialogueController : DateDialogueTrees
     {
         Vector3 offset = new Vector3(-0.9f, 2.3f, 3.0f);
         if (playerDatingController.playerResponse == 0)
-            Instantiate(brokenHeartFX, transform.position + offset, Quaternion.identity);
+            Instantiate(angryFX, transform.position + offset, Quaternion.identity);
         else if (playerDatingController.playerResponse == 1)
             Instantiate(heartFX, transform.position + offset, Quaternion.identity);
     }
@@ -156,7 +156,7 @@ public class DateDialogueController : DateDialogueTrees
         }
         else if (playerDatingController.dateInterest <= dateInterestLoseState)
         {
-            StartCoroutine(EndStateReactions(brokenHeartFX));
+            StartCoroutine(EndStateReactions(angryFX));
             dateText.text = lastLineLose;
             yield return new WaitForSeconds(timeBetweenDateLines);
             yield return StartCoroutine(DateLine(dateText));
