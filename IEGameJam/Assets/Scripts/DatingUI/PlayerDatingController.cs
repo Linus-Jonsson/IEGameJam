@@ -17,10 +17,11 @@ public class PlayerDatingController : MonoBehaviour
     public bool playerCanReply;
     
     DateDialogueController dateDialogueController;
-
+    ReplyAnimation replyAnimation;
     void Awake()
     {
         dateDialogueController = GetComponent<DateDialogueController>();
+        replyAnimation = FindObjectOfType<ReplyAnimation>();
     }
 
     void Update()
