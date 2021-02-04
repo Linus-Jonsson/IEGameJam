@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4985455275226657871}
   - component: {fileID: 4985455275226657869}
-  - component: {fileID: 4985455275226657870}
+  - component: {fileID: 1295764980}
   m_Layer: 5
   m_Name: DateSplash
   m_TagString: Untagged
@@ -26,18 +26,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4985455275226657856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 280}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4985455276433848820}
   m_Father: {fileID: 4985455275422667115}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: 10}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 7, y: 225}
   m_SizeDelta: {x: 300, y: 400}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4985455275226657869
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46,7 +46,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4985455275226657856}
   m_CullTransparentMesh: 1
---- !u!114 &4985455275226657870
+--- !u!114 &1295764980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,24 +55,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4985455275226657856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.30588236}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4985455275422667119
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +106,7 @@ RectTransform:
   m_GameObject: {fileID: 4985455275422667119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4985455275226657871}
   m_Father: {fileID: 0}
@@ -130,6 +133,7 @@ MonoBehaviour:
   replyTimeLimit: 3
   playerResponse: 0
   dateInterest: 0
+  playerCanReply: 0
 --- !u!114 &1055792585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +150,7 @@ MonoBehaviour:
   dateTextSpeed: 2
   timeBetweenDateLines: 1
   timeBetweenSplashAndText: 0.3
-  dateSplash: {fileID: 4985455275226657870}
+  dateSplash: {fileID: 1295764980}
   questionLimit: 7
   dateInterestWinState: 3
   dateInterestLoseState: -2
@@ -162,7 +166,7 @@ Canvas:
   m_GameObject: {fileID: 4985455275422667119}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -196,7 +200,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4985455275422667118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,13 +243,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4985455276433848821}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4985455275226657871}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2.4340057, y: 7.893}
@@ -281,8 +285,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DateText
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
+  m_sharedMaterial: {fileID: -6635660229072245382, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -306,17 +310,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 45.62
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
-  m_fontSizeMax: 40
+  m_fontSizeMax: 45.62
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

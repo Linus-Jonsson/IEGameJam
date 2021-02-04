@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
+  m_sharedMaterial: {fileID: -6635660229072245382, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,17 +92,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 46
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 40
+  m_fontSizeMax: 46
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -238,8 +238,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: YES
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
+  m_sharedMaterial: {fileID: -6635660229072245382, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -263,17 +263,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 46
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 40
+  m_fontSizeMax: 46
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -340,7 +340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -100, y: -40}
+  m_AnchoredPosition: {x: -125, y: -40}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7303834573653044118
@@ -416,7 +416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 100, y: -40}
+  m_AnchoredPosition: {x: 125, y: -40}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &6329034501928436152
@@ -505,7 +505,7 @@ Canvas:
   m_GameObject: {fileID: 8620922394553976959}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
