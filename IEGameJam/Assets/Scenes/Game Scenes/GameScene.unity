@@ -2550,7 +2550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5459299246892302139, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3169,6 +3169,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1498118860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6213497006554909817, guid: f98eea1ddcea5e343a85f52686fe93f0, type: 3}
+  m_PrefabInstance: {fileID: 172460160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1498118861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498118860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febb7a6c0681d894599f959bc01d5a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+--- !u!114 &1498118862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498118860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce66360ce2509e49928eef41e37f4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1000
 --- !u!1 &1524432677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1557053014
 GameObject:
