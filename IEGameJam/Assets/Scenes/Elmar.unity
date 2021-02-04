@@ -2207,24 +2207,28 @@ MonoBehaviour:
   spawns:
   - name: Doorway
     Location: {fileID: 514666310}
-    spawnSpeed: 0.1
+    spawnSpeed: 0.22
     timer: 0
     randomSpawnTimer: 0
+    OnOff: 0
   - name: stairs
     Location: {fileID: 1575882136}
-    spawnSpeed: 0.1
+    spawnSpeed: 0.16
     timer: 0
     randomSpawnTimer: 0
+    OnOff: 0
   - name: kitchen
     Location: {fileID: 2018313757}
-    spawnSpeed: 0.1
+    spawnSpeed: 0.19
     timer: 0
     randomSpawnTimer: 0
+    OnOff: 0
   - name: toilets
     Location: {fileID: 1604009893}
-    spawnSpeed: 0.1
+    spawnSpeed: 0.17
     timer: 0
     randomSpawnTimer: 0
+    OnOff: 0
 --- !u!4 &990882093
 Transform:
   m_ObjectHideFlags: 0

@@ -153,7 +153,7 @@ MonoBehaviour:
   timeBetweenSplashAndText: 0.3
   dateSplash: {fileID: 1295764980}
   questionLimit: 7
-  dateInterestWinState: 3
+  dateInterestWinState: 5
   dateInterestLoseState: -2
   brokenHeartFX: {fileID: 100006, guid: bcaff8fc36e95584bb27cc3cf7c6cb14, type: 3}
   heartFX: {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
@@ -284,10 +284,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DateText
+  m_text: Testing how the font and size looks. Could this be ok?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
-  m_sharedMaterial: {fileID: -6635660229072245382, guid: 3b88ffc8f2200bb4a890586785a82298, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 10dc1475c27393945addf64dd84f513b, type: 2}
+  m_sharedMaterial: {fileID: -7008323981287315952, guid: 10dc1475c27393945addf64dd84f513b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -311,17 +311,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 32
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
-  m_fontSizeMax: 40
+  m_fontSizeMax: 32
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 1
+  m_characterSpacing: 2
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
