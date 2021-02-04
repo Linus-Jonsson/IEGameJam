@@ -1510,6 +1510,8 @@ GameObject:
   - component: {fileID: 678731831}
   - component: {fileID: 678731830}
   - component: {fileID: 678731833}
+  - component: {fileID: 678731835}
+  - component: {fileID: 678731834}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1525,7 +1527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678731828}
   m_LocalRotation: {x: 0.06688343, y: 0, z: 0, w: 0.99776083}
-  m_LocalPosition: {x: -0.01, y: 0.721, z: 0.391}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1753299819}
@@ -1657,6 +1659,38 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &678731834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678731828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f313752c6988344e88f30d152901eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camAnim: {fileID: 678731835}
+--- !u!95 &678731835
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678731828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72bc9b35d9006d44f834859dbc0393f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &820484881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2766,7 +2800,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220710326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3604,7 +3638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[0].Maximum
-      value: 1.3
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[0].Minimum
@@ -3612,7 +3646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[1].Maximum
-      value: 1.3
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[1].Minimum
@@ -3620,7 +3654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[2].Maximum
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[2].Minimum
@@ -3628,7 +3662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[3].Maximum
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5193849307525261105, guid: 52da7552ee3c9cf48a4bc0377b187a70, type: 3}
       propertyPath: spawns.Array.data[3].Minimum
