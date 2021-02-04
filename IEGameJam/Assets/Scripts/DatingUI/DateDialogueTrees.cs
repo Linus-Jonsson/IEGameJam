@@ -30,7 +30,7 @@ public class DateDialogueTrees : MonoBehaviour
         dateQuestionsPositive.Add("Can you cook?");
         dateQuestionsPositive.Add("Are you a fan of the old tv show Lost?");
         dateQuestionsPositive.Add("Do you care about the environment?");
-        dateQuestionsPositive.Add("Is TOOL probably the best band in the world?");
+        dateQuestionsPositive.Add("Is Tool probably the best band in the world?");
         dateQuestionsPositive.Add("Would you kiss on the first date?");
         dateQuestionsPositive.Add("Have you ever made someone breakfast in bed??");
         dateQuestionsPositive.Add("Have you ever written someone a love poem?");
@@ -47,6 +47,7 @@ public class DateDialogueTrees : MonoBehaviour
         dateQuestionsNegative.Add("Have you ever told someone you love them even though you don't?");
         dateQuestionsNegative.Add("Have you ever dumped someone over text message?");
         dateQuestionsNegative.Add("Is your arm bigger than your thigh?");
+        dateQuestionsNegative.Add("Some kind of flu seems to be spreading. Have you had any symptoms?");
         
         //Response when the player doesn't give a reply within set time limit
         dateAngryResponse.Add("Hello, are you listening?!");
