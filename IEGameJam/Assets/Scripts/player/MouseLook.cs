@@ -37,7 +37,11 @@ public class MouseLook : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
         bool mouse1 = Input.GetKey(KeyCode.Mouse1);
-
+        bool gameStarted;
+        if (Input.GetKeyDown(KeyCode.Space))
+            gameStarted = true;
+        else
+            gameStarted = false;
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
@@ -71,7 +75,7 @@ public class MouseLook : MonoBehaviour
             }
         }
 
-        
+
         zoomedAmmount = Mathf.Clamp(zoomedAmmount, -1.2f, 0f);
         currentFoV = defaultFoV + endFoV * zoomedAmmount;
 

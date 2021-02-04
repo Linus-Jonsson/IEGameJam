@@ -877,6 +877,10 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8618636197070060047, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 003da87e2646809428b9275463abb55d, type: 3}
 --- !u!1 &452815097
@@ -2578,6 +2582,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 53c2ff98ebe534f4e83a7168c50e5f38, type: 3}
+    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: deathZombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459299246892302084, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5459299246892302085, guid: e8b94baf45e3b91429d9c477032b8874, type: 3}
       propertyPath: m_Name
       value: Sound Manager
