@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UponDatesDeath : MonoBehaviour
+public class GoToStatedSceneUponOnDisable : MonoBehaviour
 {
     [SerializeField] private int sceneIndex;
 
