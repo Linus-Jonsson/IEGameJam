@@ -32,6 +32,7 @@ public class Shoot : MonoBehaviour
         timer += Time.deltaTime * shootSpeed;
         if (Input.GetMouseButton(0) && timer >= 1f)
         {
+            CameraShake.instance.ShootingCamShake();
             AudioManager.instance.Play("shoot");
             midScreen = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
             isShooting = true;
@@ -52,11 +53,14 @@ public class Shoot : MonoBehaviour
                     if (hit.collider.tag == "Enemy")
                     {
                         hit.collider.GetComponent<Health>().UpdateHealth(-damage);
-                        var rot = Quaternion.FromToRotation(hit.point, transform.position);
+                        float dir = (hit.point - transform.position).magnitude; 
+                        var rot = Quaternion.LookRotation(hit.normal, transform.position - hit.point);
+                        
                         Instantiate(bloodSplatter, hit.point, rot);
                     }
                 }
             }
+            Debug.DrawRay(hit.point,transform.position - hit.point, Color.white);
             timer = 0;
         }
         if (Input.GetMouseButton(0) != true)
