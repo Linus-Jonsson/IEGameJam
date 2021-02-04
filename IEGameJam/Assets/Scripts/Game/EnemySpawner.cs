@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
                     Instantiate(prefab, s.Location.transform.position, Quaternion.identity);
                     if (s.randomSpawnTimer == true)
                     {
-                        s.spawnSpeed = UnityEngine.Random.Range(.1f, 3f);
+                        s.spawnSpeed = UnityEngine.Random.Range(s.Minimum, s.Maximum);
                     }
                     s.timer = 0;
                 }
@@ -65,13 +65,16 @@ public class spawn
     public string name;
     public GameObject Location;
     [Range(.1f, 3)]
-    public float spawnSpeed;
     [Space]
+    [Header("Spawn settings")]
+    public float spawnSpeed;
     public float timer;
-    public bool randomSpawnTimer;
     public bool OnOff;
+    [Header("Random spawn settings")]
+    public bool randomSpawnTimer;
+    public float Minimum, Maximum;
+
 }
 
-//TODO: make the spawner so that every spawnpoint has its own timer where it is modifyed in one component 
 
 
