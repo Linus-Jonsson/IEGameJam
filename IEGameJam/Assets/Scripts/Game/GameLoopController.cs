@@ -61,6 +61,16 @@ public class GameLoopController : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void HandleDeathState()
+    {
+        playerDatingController.playerCanReply = false;
+        gameInEndScreens = true;
+        stateScreens.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        deathText.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
     void StartGame()
     {
         Time.timeScale = 1f;

@@ -17,7 +17,8 @@ public class PlayerDatingController : MonoBehaviour
     public bool playerCanReply;
     
     DateDialogueController dateDialogueController;
-
+    public ReplyAnimation replyAnimation;
+    
     void Awake()
     {
         dateDialogueController = GetComponent<DateDialogueController>();
@@ -39,26 +40,34 @@ public class PlayerDatingController : MonoBehaviour
         playerCanReply = true;
         playerResponse = 0;
         float replyDuration = 0;
+        
         while (playerResponse == 0 && replyDuration < replyTimeLimit)
         {
             replyDuration += Time.deltaTime;
             yield return null;
         }
-        if (playerResponse == 0)
+        
+        if (playerResponse == 0) {
+            replyAnimation.SetAnimationTrigger("Nothing");
             dateInterest -= 1;
-        else if (playerResponse == 1)
+        }
+        else if (playerResponse == 1) {
             dateInterest += 1;
+        }
+
         playerCanReply = false;
-        playerReplySymbols.SetActive(false);
+        //playerReplySymbols.SetActive(false);
     }
 
     void PlayerRepliesYes()
     {
         playerResponse = dateDialogueController.positiveReplyIsRewarded ? 1 : 2;
+        replyAnimation.SetAnimationTrigger("Yes");
     }
 
     void PlayerRepliesNo()
     {
         playerResponse = dateDialogueController.positiveReplyIsRewarded ? 2 : 1;
+        replyAnimation.SetAnimationTrigger("No");
     }
 }
