@@ -18,7 +18,7 @@ public class DateDialogueTrees : MonoBehaviour
     {
         //Even numbers are questions where a positive reply is rewarded
         firstLine[0] = "Hello! We finally meet, are you also excited to be here?";
-        firstLine[1] = "Hey, we're here, first date. I hope you're not an axe murderer! Haha... Eh... Are you?";
+        firstLine[1] = "Hey, we're here, our first date. I hope you're not an axe murderer! Haha... Eh... Are you?";
         firstLine[2] = "Hi! I have a great feeling about this. Have you also been longing for this day?";
         firstLine[3] = "Ok, I'm actually a little nervous now that we're here. Be honest, do you regret coming here?";
         
@@ -34,6 +34,8 @@ public class DateDialogueTrees : MonoBehaviour
         dateQuestionsPositive.Add("Would you kiss on the first date?");
         dateQuestionsPositive.Add("Have you ever made someone breakfast in bed??");
         dateQuestionsPositive.Add("Have you ever written someone a love poem?");
+        dateQuestionsPositive.Add("Is lying to keep from hurting someone's feeling okay?");
+        dateQuestionsPositive.Add("Are you known for keeping your word?");
         
         //Questions where a negative reply from the player is rewarded
         dateQuestionsNegative.Add("Is personal greed important to you?");
@@ -48,7 +50,9 @@ public class DateDialogueTrees : MonoBehaviour
         dateQuestionsNegative.Add("Have you ever dumped someone over text message?");
         dateQuestionsNegative.Add("Is your arm bigger than your thigh?");
         dateQuestionsNegative.Add("Some kind of flu seems to be spreading. Have you had any symptoms?");
-        
+        dateQuestionsNegative.Add("Do you think that Citizen Kane is an overrated movie?");
+        dateQuestionsNegative.Add("If your mother looked through your texts right, would you be ashamed?");
+
         //Response when the player doesn't give a reply within set time limit
         dateAngryResponse.Add("Hello, are you listening?!");
         dateAngryResponse.Add("This is so frustrating!");
@@ -63,8 +67,8 @@ public class DateDialogueTrees : MonoBehaviour
         datePositiveResponse.Add("Amazing! I think I like you even more now.");
         datePositiveResponse.Add("Cool, you seem to be a good person.");
         datePositiveResponse.Add("I was hoping you'd say that!");
-        datePositiveResponse.Add("That's terrific!");
-        datePositiveResponse.Add("You are just perfect!");
+        datePositiveResponse.Add("That's just terrific!");
+        datePositiveResponse.Add("You are simply perfect!");
         datePositiveResponse.Add("Really..? I LOVE it!");
         
         //Response when the player gives a reply that is not rewarded

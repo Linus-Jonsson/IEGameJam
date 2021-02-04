@@ -148,6 +148,7 @@ public class DateDialogueController : DateDialogueTrees
     {
         if (playerDatingController.dateInterest >= dateInterestWinState)
         {
+            StartCoroutine(EndStateReactions(heartFX));
             dateText.text = lastLineWin;
             yield return new WaitForSeconds(timeBetweenDateLines);
             yield return StartCoroutine(DateLine(dateText));
@@ -155,10 +156,38 @@ public class DateDialogueController : DateDialogueTrees
         }
         else if (playerDatingController.dateInterest <= dateInterestLoseState)
         {
+            StartCoroutine(EndStateReactions(brokenHeartFX));
             dateText.text = lastLineLose;
             yield return new WaitForSeconds(timeBetweenDateLines);
             yield return StartCoroutine(DateLine(dateText));
             gameLoopController.HandleLoseState();
         }
+    }
+
+    IEnumerator EndStateReactions(GameObject reactionFX)
+    {
+        float timeBetweenReactions = 0.55f;
+        Vector3 offset = new Vector3(-0.9f, 2.3f, 3.0f);
+        Vector3 offset2 = new Vector3(-0.75f, 2.6f, 3.0f);
+        Vector3 offset3 = new Vector3(-0.6f, 2.45f, 3.0f);
+        Vector3 offset4 = new Vector3(-0.9f, 2.45f, 3.0f);
+        Vector3 offset5 = new Vector3(-0.75f, 2.75f, 3.0f);
+        Vector3 offset6 = new Vector3(-0.6f, 2.6f, 3.0f);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset3, Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset2, Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset, Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset5, Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset4, Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset6, Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset3, Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenReactions);
+        Instantiate(reactionFX, transform.position + offset2, Quaternion.identity);
     }
 }
