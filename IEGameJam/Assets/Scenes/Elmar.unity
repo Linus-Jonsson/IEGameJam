@@ -538,6 +538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8666006490574009579, guid: cecab3a0fc361984085531d98f0c1eca, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8913108556510204343, guid: cecab3a0fc361984085531d98f0c1eca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
