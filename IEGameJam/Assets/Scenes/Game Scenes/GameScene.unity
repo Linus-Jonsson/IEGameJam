@@ -805,6 +805,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2454160510216957792, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ef947dcef8cb7d4ebc4673f7b55b37f, type: 3}
+    - target: {fileID: 2454160510216957792, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336937090463049244, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336937090463049244, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1120
+      objectReference: {fileID: 0}
     - target: {fileID: 3878775148309646060, guid: 003da87e2646809428b9275463abb55d, type: 3}
       propertyPath: m_Name
       value: GameLoopManager
@@ -853,6 +869,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4184457149691923163, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428705870283936219, guid: 003da87e2646809428b9275463abb55d, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 003da87e2646809428b9275463abb55d, type: 3}
 --- !u!1 &452815097
@@ -897,6 +921,7 @@ MonoBehaviour:
     m_Bits: 64
   muzzleFlash: {fileID: 1097371242}
   smoke: {fileID: 309382794}
+  bloodSplatter: {fileID: 3658816020372589305, guid: 52c030f8c6eb21a488a100df42e3c7a6, type: 3}
   uziAnimator: {fileID: 236843847}
   isShooting: 0
 --- !u!114 &452815099
