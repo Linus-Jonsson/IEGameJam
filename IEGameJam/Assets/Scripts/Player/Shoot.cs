@@ -44,6 +44,7 @@ public class Shoot : MonoBehaviour
                     if (hit.collider.tag == "Wall")
                     {
                         GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.001f, Quaternion.identity) as GameObject;
+                        bulletHole.transform.LookAt(hit.point + hit.normal);
                         bulletHole.transform.SetParent(BulletHoleHolder.transform);
                         Destroy(bulletHole, 7.5f);
                     }
