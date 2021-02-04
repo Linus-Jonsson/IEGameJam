@@ -249,7 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a32619ae948d06840a1c729c6ce05c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHolePrefab: {fileID: 7174240273421129132, guid: abb1bed17f8024447bc7d8ff71fefe1b, type: 3}
+  bulletHolePrefabs:
+  - {fileID: 9215081315812946596, guid: eaf049f5357f67e43bcab1b0493969ac, type: 3}
+  - {fileID: 2733929749299886071, guid: 96ec7cc598db5bc418d1a230d6d2994f, type: 3}
+  - {fileID: 4834526150611322840, guid: d59bcebc0cd3f344da4304af2be6dc76, type: 3}
+  - {fileID: 2565704947975893911, guid: 3c8ce743130933449ab985dce4c75e00, type: 3}
   damage: 10
   shootRange: 50
   shootSpeed: 5

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     [Header("Put the damage in positive numbers")]
-    [SerializeField] private GameObject bulletHolePrefab;
+    [SerializeField] private GameObject[] bulletHolePrefabs;
     [SerializeField] private int damage;
     [SerializeField] private float shootRange;
     [Range(.5f, 20f)]
@@ -45,7 +45,7 @@ public class Shoot : MonoBehaviour
                 {
                     if (hit.collider.tag == "Wall")
                     {
-                        GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.001f, Quaternion.identity) as GameObject;
+                        GameObject bulletHole = Instantiate(GetRandomBulletHole(bulletHolePrefabs), hit.point + hit.normal * 0.001f, Quaternion.identity) as GameObject;
                         bulletHole.transform.LookAt(hit.point + hit.normal);
                         bulletHole.transform.SetParent(BulletHoleHolder.transform);
                         Destroy(bulletHole, 7.5f);
@@ -69,6 +69,8 @@ public class Shoot : MonoBehaviour
             isShooting = false;
         }
     }
+    private GameObject GetRandomBulletHole(GameObject[] gameObjects) => gameObjects[Random.Range(0, bulletHolePrefabs.Length)]; 
+
 }
 
 

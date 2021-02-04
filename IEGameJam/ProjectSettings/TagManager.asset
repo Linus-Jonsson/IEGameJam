@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall
   - Enemy
+  - FxTemporaire
+  - Date
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - Water
   - UI
   - enemy
-  - wall
-  - 
+  - Wall
+  - Date
   - 
   - 
   - 
