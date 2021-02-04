@@ -12,11 +12,17 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private GameObject prefab;
     public spawn[] spawns;
+    private GameObject enemyHolder;
 
     #region Singleton
     public static EnemySpawner instance;
     private void Awake() => instance = this;
     #endregion
+
+    private void Start()
+    {
+        enemyHolder = new GameObject("Enemy Holder");
+    }
 
     private void Update()
     {
@@ -27,7 +33,8 @@ public class EnemySpawner : MonoBehaviour
                 s.timer += Time.deltaTime * s.spawnSpeed;
                 if (s.timer >= 1f)
                 {
-                     Instantiate(prefab, s.Location.transform.position, Quaternion.identity);
+                    GameObject enemy =  Instantiate(prefab, s.Location.transform.position, Quaternion.identity) as GameObject;
+                    enemy.transform.parent = enemyHolder.transform.parent;
                     if (s.randomSpawnTimer == true)
                     {
                         s.spawnSpeed = UnityEngine.Random.Range(s.Minimum, s.Maximum);
